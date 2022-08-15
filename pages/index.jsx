@@ -31,7 +31,7 @@ export default function Home() {
       const response = await axios.get(
         `https://api.shrtco.de/v2/shorten?url=${userLink}`
       );
-      const short_Link = await response.data.result.short_link;
+      const short_Link = response.data.result.short_link;
 
       const newShortenLinks = { user_Link: userLink, shortLink: short_Link };
 
